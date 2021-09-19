@@ -1,0 +1,19 @@
+{
+	"name": "vite-vue3",
+	"version": "0.0.0",
+	"scripts": {
+		"start": "node-dev api --notify=false",
+		"build": "vite build",
+		"serve": "vite preview"
+	},
+	"dependencies": {
+		"vue": "^3.2.6"
+	},
+	"devDependencies": {
+		"express": "^4.17.1",
+		"node-dev": "^7.0.0",
+		"@vitejs/plugin-vue": "^1.6.1",
+		"@vue/compiler-sfc": "^3.2.6",
+		"vite": "^2.5.4"
+	}
+}
