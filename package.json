@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"start": "start http://localhost:8080 && node-dev api --notify=false",
-		"lint": "eslint --ext .js,.vue src",
+		"lint": "eslint --ext .js,.vue api src",
 		"format": "prettier --check ."
 	},
 	"dependencies": {
@@ -24,8 +24,14 @@
 	"eslintConfig": {
 		"extends": [
 			"plugin:vue/vue3-recommended",
-			"prettier"
-		]
+			"prettier",
+			"eslint:recommended"
+		],
+		"env": {
+			"es6": true,
+			"browser": true,
+			"node": true
+		}
 	},
 	"prettier": {
 		"bracketSpacing": true,
@@ -37,8 +43,11 @@
 		"useTabs": true,
 		"arrowParens": "avoid"
 	},
-	"pre-commit": [
-		"lint",
-		"format"
-	]
+	"pre-commit": {
+		"silent": true,
+		"run": [
+			"lint",
+			"format"
+		]
+	}
 }
