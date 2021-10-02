@@ -5,7 +5,7 @@ const run = async () => {
 	const { middlewares } = await createServer({ server: { middlewareMode: 'html' } })
 
 	express() //
-		.get('/api', (req, res) => res.json(Math.random()))
+		.get('/api', (req, res) => res.json({ rnd: Math.random() }))
 		.use(middlewares)
 		.listen(8080)
 }

@@ -2,18 +2,43 @@
 	"name": "vite-vue3",
 	"version": "0.0.0",
 	"scripts": {
-		"start": "node-dev api --notify=false",
-		"build": "vite build",
-		"serve": "vite preview"
+		"start": "start http://localhost:8080 && node-dev api --notify=false",
+		"lint": "eslint --ext .js,.vue src",
+		"format": "prettier --check ."
 	},
 	"dependencies": {
-		"vue": "^3.2.6"
+		"vue": "^3.2.19"
 	},
 	"devDependencies": {
+		"@vitejs/plugin-vue": "^1.9.2",
+		"@vue/compiler-sfc": "^3.2.19",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-vue": "^7.18.0",
 		"express": "^4.17.1",
 		"node-dev": "^7.0.0",
-		"@vitejs/plugin-vue": "^1.6.1",
-		"@vue/compiler-sfc": "^3.2.6",
-		"vite": "^2.5.4"
-	}
+		"pre-commit": "^1.2.2",
+		"prettier": "^2.4.1",
+		"vite": "^2.6.2"
+	},
+	"eslintConfig": {
+		"extends": [
+			"plugin:vue/vue3-recommended",
+			"prettier"
+		]
+	},
+	"prettier": {
+		"bracketSpacing": true,
+		"printWidth": 140,
+		"semi": false,
+		"singleQuote": true,
+		"tabWidth": 4,
+		"trailingComma": "none",
+		"useTabs": true,
+		"arrowParens": "avoid"
+	},
+	"pre-commit": [
+		"lint",
+		"format"
+	]
 }
