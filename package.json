@@ -4,7 +4,8 @@
 	"scripts": {
 		"start": "start http://localhost:8080 && node-dev api --notify=false",
 		"lint": "eslint --ext .js,.vue api src",
-		"format": "prettier --check ."
+		"format": "prettier --check .",
+		"postversion": "git push --tags"
 	},
 	"dependencies": {
 		"vue": "^3.2.19"
