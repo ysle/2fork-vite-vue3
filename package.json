@@ -11,16 +11,16 @@
 		"vue": "^3.2.19"
 	},
 	"devDependencies": {
-		"@vitejs/plugin-vue": "^1.9.2",
-		"@vue/compiler-sfc": "^3.2.19",
-		"eslint": "^7.32.0",
+		"@vitejs/plugin-vue": "^1.9.4",
+		"@vue/compiler-sfc": "^3.2.22",
+		"eslint": "^8.2.0",
 		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-vue": "^7.18.0",
+		"eslint-plugin-vue": "^8.1.1",
 		"express": "^4.17.1",
-		"node-dev": "^7.0.0",
+		"node-dev": "^7.1.0",
 		"pre-commit": "^1.2.2",
 		"prettier": "^2.4.1",
-		"vite": "^2.6.2"
+		"vite": "^2.6.14"
 	},
 	"eslintConfig": {
 		"extends": [
